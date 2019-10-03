@@ -38,7 +38,7 @@ angular.module('myApp', [])
     $scope.offerList = dummyJson.offerList;
 
     //Popover 
-   this.IsVisible = false;
+   this.IsVisible = false; 
    $scope.ShowHide = function(){
         this.IsVisible == true ?  this.IsVisible = false : this.IsVisible = true;
     }
