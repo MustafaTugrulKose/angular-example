@@ -1,0 +1,143 @@
+.card-content {
+    background: #f6f6f6;
+    width: 100%;
+    padding: 10px 0;
+    font-size:14px;
+    margin-top:50px;
+    .card-item {
+        background: #fff;
+        padding: 10px;
+        border: 1px solid #ddd;
+        margin-top: 10px;
+        width: 100%;
+        min-height: 150px;
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+        &:first-child {
+            margin: 0;
+        }
+        .col-item  {
+            &.align-right {
+                text-align: right;
+            }
+            figure,.in {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0
+
+            }
+            .in {
+                position: relative;
+                margin-left: 25px;
+                padding-left: 25px;
+                span {
+                    display: block;
+                }
+                &:after {
+                    content:"";
+                    position: absolute;
+                    left:0;
+                    top:0;
+                    border-left: 1px solid #ddd;
+                    width: 1px;
+                    height: 50px;;
+                }
+                .popover-content {
+                    position: relative;
+                    .icon {
+                        position: absolute;
+                        right: -20px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        background: #ddd;
+                        display: inline-block;
+                        border-radius: 100%;
+                        width: 17px;
+                        height: 17px;
+                        text-align: center;
+                        line-height: 15px;
+                        color: #fff;
+                        cursor: pointer;
+                        font-size: 12px;
+                    }
+                    .popover {
+                        background: #f9f9f9;
+                        position: absolute;
+                        top: 25px;
+                        min-height: 50px;
+                        min-width: 230px;
+                        padding: 10px;
+                        z-index: 99;
+                        box-shadow: 0px 1px 9px -3px #6c757d;
+                        border-radius: 4px;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                }
+            }
+            .price {
+                display: block;
+                text-align: right;
+                span {
+
+                    text-decoration: line-through;
+                }
+            }
+            .new-price {
+                display: block;
+                font-weight: bold;
+                font-size:18px;
+                text-align: right;
+            }
+        }
+        .btn {
+            display: inline-block;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            border: 1px solid transparent;
+            padding: .375rem .75rem;
+            font-size: 1rem;
+            line-height: 1.5;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            margin-top:40px;
+            min-width: 140px;
+        }
+        .btn-primary {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+            cursor: pointer;
+            &:hover {
+                color: #fff;
+                background-color: #0069d9;
+                border-color: #0062cc;
+            }
+        }
+        .btn-outline-primary {
+            color: #007bff;
+            background-color: transparent;
+            background-image: none;
+            border-color: #007bff;
+            cursor: pointer;
+            line-height: 14px;
+            font-size: 12px;
+            span {
+                display: block;
+                font-weight: bold;
+            }
+            &:hover {
+                color: #fff;
+                background-color: #007bff;
+                border-color: #007bff;
+            }
+        }
+    }
+}

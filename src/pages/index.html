@@ -1,0 +1,40 @@
+<div class="container">
+  <div class="row">
+    <div class="card-content">
+      <div class="col-sm-12">
+        <div class="card-item" ng-repeat="value in offerList">
+
+          <div class="col-item">
+            <figure>
+              <img ng-src="assets\img\{{value.ImagePath}}" alt="\{{value.FirmName}}"/>
+            </figure>
+            <div class="in">
+              <span><strong ng-bind="value.ProductDesc"></strong></span>
+              <div class="popover-content" >
+                <span ng-bind="value.FirmName"></span>
+                <div ng-repeat="popover in value.popoverContent">
+                  <span class="icon" ng-click="ShowHide()" >!</span>
+                  <span class="popover"  ng-bind="popover.Description" ng-show="IsVisible"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-item align-right">
+            <div ng-repeat="setPrice in value">
+              <span ng-if="setPrice.HasDiscount == false" class="new-price">
+                <span ng-bind="value.Cash"></span></span>
+
+                <span ng-if="setPrice.HasDiscount == true" class="price">Peşin Fiyatına 
+                  <span ng-bind="value.Cash"></span></span>
+
+                  <span ng-bind="setPrice.PremiumWithDiscount" ng-if="setPrice.HasDiscount == true" class="new-price"></span>
+                </div>
+                <button ng-if="value.SaleClosed == false" class="btn btn-primary">SATIN AL</button>
+
+                <button ng-if="value.SaleClosed == true" class="btn btn-outline-primary">TELEFONLA SATIN AL <span>444 24 00</span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>

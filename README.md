@@ -1,0 +1,9 @@
+# angularJS
+
+```
+  npm install
+```
+
+```
+  gulp
+```
